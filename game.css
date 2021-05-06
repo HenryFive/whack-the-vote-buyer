@@ -1,0 +1,553 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,500italic,700,700italic,900,900italic&subset=latin,latin-ext,cyrillic,cyrillic-ext,greek-ext,greek,vietnamese);
+@import url(https://fonts.googleapis.com/css?family=Sigmar+One);
+
+#center-game-screen {
+    margin: 0 auto;
+    width: 640px;
+    height: 480px;
+}
+#whack-the-vote-buyer {
+    position: relative;
+    width: 640px;
+    height: 480px;
+}
+
+#play-game {
+    position: relative;
+    background-image: url("img/backdraft_4x3_gray.gif");
+    width: 640px;
+    height: 480px;
+    overflow: hidden;
+    cursor: url("img/cursor_newspaper.png") 26 7, auto;
+}
+
+#play-game:active {
+    cursor: url("img/cursor_wack.png") 26 7, auto;
+}
+
+#game-level {
+    position: absolute;
+    left: 170px;
+    top: 33px;
+    color: #fff;
+    text-shadow: 0px -3px 0px #cdcdcd;
+    font-size: 40px;
+    font-family: 'Sigmar One';
+    font-weight: 900;
+    width:300px;
+    text-align: center;
+
+    -webkit-transition: color 0.15s ease;
+    -moz-transition: color 0.15s ease;
+    -o-transition: color 0.15s ease;
+    transition: color 0.15s ease;
+}
+
+.blink-stats{
+    color: #000;
+}
+
+#game-stats {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 175px;
+}
+
+#star-holder{
+    padding-top: 13px;
+    width: 170px;
+    height: 47px;
+}
+
+#star-1{
+    margin-left: 6px;
+    float:left;
+    height: 47px;
+    width: 50px;
+    background-image: url("img/star_yellow.png");
+}
+
+#star-2{
+    margin-left: 4px;
+    float:left;
+    height: 47px;
+    width: 50px;
+    background-image: url("img/star_yellow.png");
+}
+
+#star-3{
+    margin-left: 4px;
+    float:left;
+    height: 47px;
+    width: 50px;
+    background-image: url("img/star_yellow.png");
+}
+
+#scoring{
+    margin-top: 16px;
+    margin-left: 6px;
+    color: #fff;
+    text-shadow: 0px -2px 0px #cdcdcd;
+    font-size: 25px;
+    font-family: 'Sigmar One';
+    font-weight: 900;
+}
+
+
+
+/*  wood box slices     */
+
+#box-row-4{
+    width: 640px;
+    height: 72px;
+    position:absolute;
+
+    bottom:274px;
+    left:-3px;
+    background-image: url("img/box_row_4.gif");
+/*
+    border: 1px solid yellow;
+    border-top: 1px solid orange;
+*/
+}
+
+#box-row-3{
+    width: 640px;
+    height: 98px; 
+    position:absolute;
+    bottom:194px;
+
+    left:-3px;
+    background-image: url("img/box_row_3.gif");
+/*
+    border: 1px solid yellow;
+    border-top: 1px solid orange;
+*/
+}
+
+#box-row-2{
+    width: 640px;
+    height: 112px;
+    position:absolute;
+    bottom:102px;
+    left:-1px;
+    background-image: url("img/box_row_2.gif");
+/*
+    border: 1px solid yellow;
+    border-top: 1px solid orange;
+*/
+}
+
+#box-row-1{
+    width: 640px;
+    height: 124px;
+    position:absolute;
+    bottom:0px;
+    left:0;
+    background-image: url("img/box_row_1.gif");
+/*
+    border: 1px solid yellow;
+    border-top: 1px solid orange;
+*/
+}
+
+/* Starting positions */
+.zone-all {
+    position: absolute;
+    display: inline;
+    border: 1px solid green;
+    width: 77px;
+    height: 142px;
+}
+
+#zone-a-1 {
+    left: 132px;
+    top: 377px;
+}
+
+#zone-a-2 {
+    left: 280px;
+    top: 377px;
+}
+
+#zone-a-3 {
+    left: 435px;
+    top: 377px;
+}
+
+#zone-b-1 {
+    left: 141px;
+    top: 285px;
+}
+
+#zone-b-2 {
+    left: 275px;
+    top: 285px;
+}
+
+#zone-b-3 {
+    left: 412px;
+    top: 285px;
+}
+
+#zone-c-1 {
+    left: 148px;
+    top: 205px;
+}
+
+#zone-c-2 {
+    left: 275px;
+    top: 205px;
+}
+
+#zone-c-3 {
+    left: 395px;
+    top: 205px;
+}
+
+/* hands */
+.hand-row-a, .hand-row-b, .hand-row-c {
+/*    border: 1px solid blue;   */
+    display: block;
+    width: 77px;
+    height: 142px;
+    position: relative;
+
+    background-image: url("img/hand.gif");
+}
+
+.clicked-no {
+    top: 7px;
+    position: relative;
+    display: none;
+    width: 77px;
+    height: 76px;
+    background-image: url('img/clicked_no.png');
+}
+
+/* whack-mobile */
+.whack-mobile {
+    position: absolute;
+    display: inline;
+    display: none;
+    width: 179px;
+    height: 96px;
+    background-image: url('img/whack_mobile.png');
+}
+
+#whack-mobile-a-1 {
+    left: 85px;
+    bottom: 83px;
+}
+
+#whack-mobile-a-2 {
+    left: 234px;
+    bottom: 83px;
+}
+
+#whack-mobile-a-3 {
+    left: 388px;
+    bottom: 83px;
+}
+
+#whack-mobile-b-1 {
+    left: 100px;
+    bottom: 169px;
+}
+
+#whack-mobile-b-2 {
+    left: 235px;
+    bottom: 169px;
+}
+
+#whack-mobile-b-3 {
+    left: 370px;
+    bottom: 169px;
+}
+
+#whack-mobile-c-1 {
+    left: 108px;
+    bottom: 245px;
+}
+
+#whack-mobile-c-2 {
+    left: 235px;
+    bottom: 245px;
+}
+
+#whack-mobile-c-3 {
+    left: 357px;
+    bottom: 245px;
+}
+
+
+/* infographics layout */
+
+#confetti {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    width: 640px;
+    height: 480px;
+}
+
+#info-educate {
+    font-family: 'Roboto', serif;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: white;
+    background: #1d3160;
+    width: 512px;
+    height: 352px;
+
+    display: none;
+    cursor: default;
+    padding: 64px;
+}
+
+#sunstar-logo-brand {
+    background-image: url(img/sunstar_logo.png);
+    position: absolute;
+    width: 117px;
+    height: 31px;
+    bottom: 17px;
+    left: 262px;
+}
+
+#win-message {
+    text-align: center;
+    top: 50px;
+    left: 100px;
+    font-size: 12pt;
+    font-weight: 700;
+}
+
+.info-top-para {
+    line-height: 28px;
+    width: 470px;
+    display: block;
+    margin: 0 auto;
+}
+
+.big-v {
+    font-weight: 700;
+    font-size: 50pt;
+    line-height: 80px;
+    width: 34px;
+    margin-left: 30px;
+    float: left;
+}
+
+.omnibus-code {
+    margin: 16px 0 0 10px;
+    font-weight: 300;
+    font-size: 12pt;
+    float: left;
+}
+
+.info-mid-para {
+    text-align: center;
+    top: 150px;
+    left:160px;
+    line-height: 30px;
+    font-weight: 300;
+    font-size: 12pt;
+    text-align: center;
+}
+
+.clear-it{
+    clear:both;
+}
+.yellow-bar-1 {
+    background: #ecb42a;
+    position: absolute;
+    top: 64px;
+    right: 64px;
+    width: 511px;
+    height: 7px;
+}
+.yellow-bar-2 {
+    background: #ecb42a;
+    position: absolute;
+    bottom: 64px;
+    right: 64px;
+    width: 511px;
+    height: 7px;
+
+}
+#edu-graphics {
+    position: absolute;
+    left: 166px;
+    bottom: 90px;
+    height: 131px;
+    width: 311px;
+    margin: 15px auto 0;
+    display: block;   
+}
+
+#imprisonment {
+    height: 131px;
+    width: 127px;
+    margin: 0 auto;
+    display: block;
+    background-image: url(img/imprisonment.png);
+}
+.money-pair-1 {
+    height: 105px;
+    width: 311px;
+    position: absolute;
+    bottom: 0;
+    background-image: url(img/info_money.png);
+}
+
+.money-pair-2 {
+    height: 105px;
+    width: 311px;
+    position: absolute;
+    bottom:10px;
+    background-image: url(img/info_money.png);
+}
+
+.money-pair-3 {
+    height: 105px;
+    width: 311px;
+    position: absolute;
+    bottom: 20px;
+    background-image: url(img/info_money.png);
+}
+
+.btn-play {
+    height: 31px;
+    width: 117px;
+    font-family: 'Roboto', serif;
+    font-weight: 300;
+    font-size: 12pt; 
+    color: #1d3160;
+    text-align: center;
+    line-height: 30px;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border:2px solid #857344;
+    background-color:#ECB42A;
+
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    position: absolute;
+    bottom: 94px;
+    right: 64px;
+}
+
+.btn-play:hover, #btn-play:focus {
+    color: #fff;
+    border-color: #fff;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+}
+
+.btn-play:active {
+    color: #1d3160;
+    border-color: #ECB42A;
+    background-color:#857344;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+}
+
+/* game intro */
+
+#game-intro {
+    font-family: 'Roboto', serif;
+    position: absolute;
+    top:0;
+    left:0;
+    background-image: url(img/bg_intro.gif);
+    width: 512px;
+    height: 480px;
+    color: #fff;
+    font-size: 11pt;
+    display:table-cell;
+    vertical-align:bottom;
+    font-weight: 300;
+    padding: 0 64px;
+}
+
+#mechanics ul {
+    list-style-type:none;
+    margin-left: 0.5em;
+    padding-left: 1em;
+    text-indent: 0em;   
+ }
+
+#mechanics {
+    line-height: 20px;
+    padding: 10px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    border: 2px solid #fff; 
+    background-color:#7e7e7e;
+}
+
+.btn-intro {
+    color: #fff;
+    text-align: center;
+    height: 31px;
+    width: 117px;
+    font-size: 12pt; 
+    text-align: center;
+    line-height: 30px;
+
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    border:2px solid #fff;
+    background-color:#7e7e7e;
+
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    margin:0 auto;
+
+}
+
+.btn-intro:hover, #btn-intro:focus {
+    border-color: #fff;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+}
+
+.btn-intro:active {
+    border-color: #fff;
+    background-color:#857345;    
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+}
+
+#holder-bar {
+    background: #7e7e7e;
+    width: 511px;
+    height: 7px;
+    margin: 10px 0;
+    border: 1px solid #fff;
+}
+
+#progress-bar {
+    background: #fff;
+    width: 1%;
+    height: 100%;
+}
+
+.blinker{
+    border-color: #bdbdbd;
+}
